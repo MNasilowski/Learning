@@ -1,0 +1,312 @@
+%aąbcćdeęfghijklłmnńoóprsśtuwzżź
+%AĄBCćDEĘFGHIJKLŁMNŃOÓPRSŚTUWZŻŹ z z kropką z z kreską
+\documentclass[polish,12pt]{pracamgr}
+%\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
+
+%\addtolength{\textwidth}{-0.3cm}
+ %\addtolength{\textheight}{-3cm}
+
+\usepackage{pstricks}
+\usepackage{color}
+%\usepackage[latin2]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\input{epsfx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage{multirow}
+%\usepackage{natbib}
+\usepackage[polish]{babel}
+%\bibliographystyle{apj}
+
+\definecolor{Red}{rgb}{1,0,0}
+\newcommand{\q}[1]{\textcolor{Red}{#1}}
+\newcommand{\m}[1]{$\spadesuit$\marginpar{\q{\textit{#1}}}}
+\def\slash#1{\setbox0=\hbox{$#1$}#1\hskip-\wd0\dimen0=5pt\advance
+       \dimen0 by-\ht0\advance\dimen0 by\dp0\lower0.5\dimen0\hbox
+         to\wd0{\hss\sl/\/\hss}}
+
+\newcommand{\jr}[1]{\color{red}      #1}
+\newcommand{\e}{}
+
+\linespread{1.3} 
+
+\author{Marcin Nasiłowski}
+\nralbumu{258176}
+\title{Ilość transjentów obserwowanych przez misję gaja} 
+\tytulang{\center{Latex}}
+\kierunek{Astronomia}
+\zakres{Astronomia Obserwacyjna}
+\opiekun{ Łukasz Wyrzykowski\\(Obserwatorium Astronomiczne UW)}
+\date{Warszawa, grudzień 2013}
+\dziedzina{
+13.7 Astronomia i Astrofizyka. \\
+}
+\klasyfikacja{}
+\keywords{\center{Astrometria, Termodynamika, Latex}}
+
+\begin{document}
+\maketitle
+\begin{abstract} 
+W poniższej pracy dowiemy się ile poszczególnych typów zjawisk przejściowych zaobserwuje misja Gaia. W tym celu zapoznamy się z budową i działaniem sondy kosmicznej Gaia. Dowiemy się również, czym są zjawiska przejściowe i czym się różnią od zjawisk zmiennych. Przyjrzymy się dokładniej kilu z podstawowych typów transientów: Nowym karłowatym, Nowym klasycznym, Supernowym, Gwiazdom typu RCrB oraz mikrosoczewkowaniu grawitacyjnemu. Oszacujemy również ilość supernowych które sonda powinna zaobserwować.
+\end{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\chapter{Misja Gaia}
+Gaia: Astrometryczna misja, która została zaprojektowana by rozwiązać jedno z wyzwań współczesnej astronomii: by stworzyć wyjątkowo precyzyjną, trójwymiarową mapę dla około miliarda gwiazd, z naszej galaktyki. Przegląd ten osiągnął granicę jasności 19 mag z astrometryczną dokładnością 10us dla V = 15 mag. W trakcie trwania misji zarejestrowane zostaną ruchy gwiazd oraz ich obserwowalne własności fizyczne takie jak jasność, temperatura, pole grawitacyjne i skład chemiczny. Dodatkowo sonda umożliwi wykrycie i klasyfikację orbitalną tysięcy poza słonecznych układów planetarnych, wykona przegląd około miliona małych ciał naszego układu słonecznego a także galaktyk w bliskim wszechświecie oraz odległych kwazarów.
+Sonda wyposażona jest w dwa zwierciadła o wymiarach 1,5 na 0,5 metra obrócone względem siebie o 106,5 stopnia. Przy rotacji równej jednemu stopniowi na minutę dają one dwie obserwacje, co niecałe dwie godziny. W wyniku precesji zestaw takich pomiarów jest powtarzany, średnio, co 52 dni. Centrum galaktyki raz na 73 a obłoki Magellana, co 46 dni. 
+
+\begin{figure}
+\centering
+\includegraphics[width = 10cm]{Scanning.eps}
+\caption{Ilość obserwacji danego punktu w ciągu 5 lat trwania misji. }  
+\label{Rys 1 }
+\end{figure}
+Każda obserwacja będzie automatycznie porównywana z poprzednimi. Jeżeli Gaia zauważy istotną różnicę między starymi i nowymi danymi obiekt będzie poddawany dalszej analizie. Kolejnym krokiem jest sklasyfikowanie obiektu. Pomocne w tym są dane z innych przeglądów nieba na przykład OGLE czy SDSS. Po powyższej procedurze informacje o obiekcie umieszczane są na liście alertów i rozsyłane do sieci obserwatoriów, naziemnych.
+
+\chapter{Ilosć obserwowanych zjawisk przejsciowych}
+Wśród miliarda zaobserwowanych zjawisk znajdą się również te gwałtowne z bardzo krótkim czasem charakterystycznym na przykład Supernowe, Nowe, Gwiazdy typu RCrB czy też zjawiska soczewkowana grawitacyjnego. Takie zjawiska nazywamy zjawiskami przejściowymi lub inaczej transientami.
+\begin{figure}[h]
+\centering
+\includegraphics[width = 10cm]{Mapa2.eps}
+\caption{Drzewo astronomicznych zjawisk zmiennych, na podstawie "Variable tree" stworzonego przez L. Eyer i N. Movlovi. Zjawiska przejściowe podkreślono na czerwono.}
+\label{Rys 2}
+\end{figure}
+Są one grupą bardzo różnorodnych zjawisk, część z nich, chociażby supernowe typu 1a są bardzo regularne i za każdym razem zachowują się praktycznie tak samo. Inne jak chociażby RCrB są tak nieregularne, że próby znalezienia jakiś wzorców kończyły się niepowodzeniem. W związku z powyższym dla każdego gatunku w trochę inny sposób szacowano ich ilość.
+
+\section {Supernowe}
+Supernowe Charakteryzują się gwałtownym wzrostem jasności, do wielkości porównywalnych z jasnością całej galaktyki, oraz jej powolnym spadkiem. Ze względu na linie widoczne w widmie dzielimy je na kilka typów.
+\begin{itemize}
+\item	Supernowe typu Ia charakteryzują się brakiem obecności wodoru i helu oraz linią krzemu na długości 614.0 nm. Powstają one, gdy biały karzeł przekroczy masę chandrasekhara ewentualnie, gdy połączą się ze sobą dwa białe karły.  Dzięki swej wyjątkowej jednorodności i wysokiej jasności absolutnej, często są wykorzystywane, jako Świece standardowe przy wyznaczaniu odległości.
+\item  Supernowe typu Ib/c w ich widmach nie ma widocznych śladów wodoru oraz nie występują tam linie krzemu. Powstają w wyniku zapaści się jądra masywnych gwiazd, które odrzuciły otoczkę wodorową (typ Ib) lub otoczkę Helową, typ Ic.
+\item  Supernowe typu II. Powstają w wyniku zapaści jądra gwiazd, które nie zdążyły odrzucić zewnętrznej warstwy wodoru, w związku, z czym w ich widmach linie tego pierwiastka są widoczne. Typ drugi również dzielimy na podtypy.
+\begin{itemize}
+\item Typ IIn. Nie posiada wąskich lini emisyjnych. 
+\item Typ IIl. Widoczne wąskie linie emisyjne oraz spadek jasności jest w  przybliżeniu liniowy
+\item Typ IIp. Spadek jasności zatrzymuje się na pewien czas.
+\end{itemize}
+\end{itemize}
+\begin{figure}[h]
+\centering
+\includegraphics[width = 12cm]{Supernowe_Porownanie.eps}
+\caption{Porównanie widma supernowych w maksimum blasku. Na podstawie danych z Peter Nuget}
+\label{Rys 3}
+\end{figure}
+ Ze względu na swą dużą jasność supernowe są widoczne przez Gaię nawet z odległości 0,12z (1,5 miliarda lat świetlnych). Przy takich dystansach możemy je traktować, jako jednorodnie rozłożone w przestrzeni i tylko dysk galaktyczny sprawia, że w odległości 10 stopni od niego zjawisk tych praktycznie się nie obserwuje. 
+\begin{figure}[h]
+\centering
+\includegraphics[width = 12cm]{Surnowe_rozmieszczenie.eps}
+\caption{ Rozmieszczenie Supernowych z USC. Widoczny pusty obszar w okolicach dysku galaktycznego spowodowany jest ekstynkcją galaktyczną. Wyraźnie widoczne są również obszary częściej obserwowanea.}
+\label{Mapa Supernowych}
+\end{figure}
+Częstotliwość występowania powyższych zjawisk przyjęto jako jako jednorodną w całej przestrzeni i wynoszącą dla supernowych Ia
+	\begin{equation}
+	\rho = 1,29^{0,88+0,27}_{-0,57-0,28} \times 10^{-4} / rok / Mpc^3 
+	\end{equation}
+
+
+\subsection{Wyznaczenie ilości supernowych typu 1a}
+Pierwszym krokiem przy szacowaniu ilości supernowych było wyznaczenie zależności strumienia bolometrycznego od czasu F(t) widzianego przez Gaię. 
+	\begin{equation}
+	F(t) = \int f(\lambda,t) G(\lambda) d\lambda
+	\end{equation}
+
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 6cm]{K_Korrection.eps}
+\caption{Porównanie widma rzeczywistego i widzianego przez Gaię.}
+\label{ K_korrection Podpis}
+\end{figure}
+
+Znając strumień bolometryczny w maksimum blasku Fmax oraz jasność absolutną mmax w tym momencie można wyznaczyć krzywą zmian blasku w filtrze G.
+	\begin{equation}
+	m_G(t) = -2.5log(\frac{F(t_{max}}{F_G(t)}) + m_x(t_max)
+	\end{equation}
+Jasność absolutna w maksimum zależy od obiektu i filtru w jakim obserwujemy. Dla supernowych 1a przyjęto
+	\begin{equation}
+	m_{max} = -18.74^{+0,39}_{-0,49}
+	\end{equation}
+Jest to średnia wartość jasności absolutnych obserwowanych w filtrze g i V. Uwzględniając przesunięcie ku czerwieni oraz odległość dostajemy przybliżenie obserwowanej krzywej zmian blasku w zależności od dystansu dzielącego nas od obiektu.
+	\begin{equation}
+	m_G(t,z) = -2.5log(\frac{10pc \int f(\lambda + \Delta \lambda,t)G(\lambda)}{F(t_{max}) \cdot dl(z)}
+	\end{equation}
+Mając model krzywej zmian blasku możemy wyznaczyć czas, przez jaki Gaia będzie mogła zobaczyć supernową. Czyli jak długo supernowa będzie miała jasność obserwowalną większą niż 19 mag.Czas jest proporcjonalny do prawdopodobieństwa zaobserwowania obiektu. W ciągu pięciu lat trwania misji Gaia będzie obserwowała każdy punkt mniej więcej, co 52 dni, zatem prawdopodobieństwo, że supernowa  zostanie zaobserwowana wynosi
+	\begin{equation}
+	P(z) = \frac{T(z)}{52} 
+	\end{equation}
+Jeżeli supernowa będzie widoczna przez dłuższy czas niż średnia częstotliwość obserwacji to zakładam, że na pewno zostanie zaobserwowana. Natomiast wartość oczekiwana zliczeni będzie równa
+	\begin{equation}
+	N = \int P(z) \rho dV(z)
+	\end{equation}
+gdzie częstotliwosć występowania supernowych wynosi:
+%http://www.aanda.org/articles/aa/ref/2012/09/aa19364-12/aa19364-12.html
+
+ Elementem objętości wszechświata i wynosi
+	\begin{equation}
+	dV(z) =4 \pi R^{2} dR \int _{0}^{80} sin(\theta) 
+	\end{equation}
+Granice całkowania w powyższym wyrażeniu wynikają stąd, że w odległości 10 stopni od płaszczyzny galaktyki zaobserwowano tylko 65 supernowych w związku z czym przyjęto, że tam supernowych Gaia nie zaobserwuje. 
+\subsection{wyniki}
+Stosując powyższy Algorytm dla czterech różnych  różnych typów supernowych uzyskano następujące wyniki
+\begin{table}{h}
+	\caption{Ilość obserwowanych supernowych rocznie}
+	\label{nazwa odnosnika, ktora potem uzyjemy do cytowania tabeli}
+	\begin{tabular}{ r|c|c|c |c}
+  	Autor oszacowania &  SN Ia & SN Ib i c & SN IIl & SN IIp\\ 
+  	\hline
+  	Nasilowski 2016 & 1391 & 180  & 85 & 25\\
+	\hline
+	Cappellaro & 1096 &&& 163
+	\end{tabular}
+	\end{table}
+
+Wszystkie trzy oszacowania podają zbliżone wartosci które są zdecydowanie wyższe niż 
+
+Dzięki przeglądowi nieba wykonanemu przez Gaię dostaniemy gigantyczne ilości informacji które pozwolą nam lepiej poznać wszechświat. Ddzięki trzem tysiącom supernowych odkrytych przez gaię będziemy mogli lepiej poznać ich naturę. Sprawdzić czy żeczywiście są tak dobrynmi świecami standardowymi jak się wydawało a dzięki temu poprawi się nasza dokładność pomiarów odległości we wszsechświecie. Supernowe pomogą również dokładniej oszacować stałą kluczową dla kosmologii: Stałą Hubble'a. Rozwiązując zjawiska mikrosoczewkowania grawitacyjnego będziemy mogli wyznaczyć masy pojedynczych obiektów i ich związek z jasnością. To pozwoli lepiej zrozumieć ewolucję gwiazdową. Na koniec pięcio letni przegląd nieba da nam dane o milionach gwiazd. Ich fotometrię, spektroskopię i astrometrię. Dzięki tak dużej ilości danych na pewno dokonamy odkryć które podążając za nagłówkami z popularnych portali informacyjnych "zrewolucjionizują nasze wyobrażenie o wszechświecie.
+\subsection{Wpływ parametrów początkowych na wyniki}
+Przy wyznaczaniu ilości supernowych dokonano kilku założeń. Od wielkości stałej Hubble’a po rozkład obserwowanych jasności supernowych.
+\subsubsection{stała Hubble'a}
+Stała Hubble’a jest jedną z fundamentalnych stałych fizycznych. Określa ona tempo rozszerzania się wszechświata. W powyższej pracy przyjęto jej wartość zgodną z wielkością opartą na obserwacji mikrofalowego promieniowania tła wykonanego przez WMAP 
+$ H_0 = 70.4 (km/s)/Mpc $ . Inne misje z ostatnich pięciu lat podawały w granicach od $H_0 = 67,15(km/s)/Mpc$ na podstawie danych z misji Planka do$ H_0 = 74,3 \pm 2,1(km/s)/Mpc $ na podstawie danych ze Spitzera. Wzrost tego parametru w obliczeniach sprawia, że ilość obserwowanych supernowych wzrasta. Różnica jednak jest zbyt mała  by na podstawie samej ilości supernowych dało się powiedzieć, która z podanych wartości jest najbardziej zbliżona do rzeczywistej. 
+	\begin{table}
+	\caption{Ilość obserwowanych supernowych w zależnosci od przyjęűtej stałej plancka}
+	\label{nazwa odnosnika, ktora potem uzyjemy do cytowania tabeli}
+	\begin{tabular}{ r|c|c|c }
+  	Stała Hubblea &  67,15 & 70,4 &74,1\\ 
+  	\hline
+  	Ilosć supernowych & 5,07 & 5,14 & 5,22\\
+	\end{tabular}
+	\end{table}
+
+
+%http://www.esa.int/Our_Activities/Space_Science/Planck/Planck_reveals_an_almost_perfect_Universe
+%http://iopscience.iop.org/0004-637X/758/1/24/pdf/0004-637X_758_1_24.pdf
+
+\subsubsection{model kosmologiczny}
+Kolejnym elementem, który założono jest model kosmologiczny i zależność między jasnością obserwowaną a odległością. W płaskiej przestrzeni. To, jaki kształt ma przestrzeń ma wpływ na sposób, w jaki światło się rozchodzi i jak maleje strumień wraz z odległością. W płaskiej przestrzeni strumień będzie malał jak odległość do kwadratu w innych niekoniecznie. W pracy przyjęto, przybliżony związek między odległością świetlną a przesunięciem ku czerwieni w postaci:
+\begin{equation}
+dl = \frac{ZC}{H_0}
+\end{equation}
+Przy dużych przesunięciach już ten związek nie jest do końca poprawny. Przy $z = 0,15$  $\Omega_M  = 0,24 i \Omega_V = 0,76$ i $H_0 = 70,4$ odległosc mierzona na podstawie strumienia swiatła i rozmiarów kątowych będzie równa odpowiednio 718Mpc i 543 Mpc. Stosując te sposoby wyznaczania odległosci odpowiednio do wyanaczania jasnosci obserwowanej i elementów objętosci wszechswiata dostajemy oszacowanie na ilo%. Kolejny raz różnica między dwoma modelami nie jest zbyt dóża i nie powinna wpływać na ostateczny wynik dla tego w pracy urzyto tego a nie innego związku.
+\begin{table}
+	\caption{Związek między odległoscią a przesunięciem ku czerwieni}
+	\label{tab 34}
+\begin{tabular}{r|c|c|c|c|c|c}
+Przesunięcie ku czerwieni &	0.15&  0.12& 0.1&	0.07&	0.04&	0.01 \\
+Zastosowane przybliżenie&	639&	511&426& 298&170&42 \\
+Odległosc jasnosciowa     &	718&	563&463& 317&177.6&43 \\
+DL przyb		         & 	716&  560&460& 315& 175&42 \\
+DA			         &	543&	449&383&277&164&43 \\
+DA przyb		         &	543&	450&383&277&163&42 \\
+\end{tabular}
+	\end{table}
+
+\subsubsection{zasięg wykrywalności}
+Zasięg wykrywalności ma kluczowe znaczenie dla obserwatorów amatorów jak i profesjonalnych Astronomów. Zwiększenie średnicy teleskopu z 8”do 14z większa nam zasięg danego teleskopu z 13 do 14 mag co z kolei przekłada się na ilość teoretycznie dostrzegalnych obiektów. Tak samo jest z Gaią. Od przyjętego zasięgu sondy w zdecydowany sposób będzie zależała ilość zaobserwowanych transientów. W pracy przyjęto, że Gaia ma zasięg 19 mag.
+\subsubsection{rozkład jasności absolutnych}
+Ostatnim elementem, jaki przyjęto przy oszacowaniu ilości supernowych był rozkład jasności absolutnych supernowych w ich maksimum blasku. Supernowe, jako obiekty fizyczne i mocno złożone nigdy nie będą się zachowały w sposób identyczny. Nawet supernowe 1a stosowane często, jako świece standardowe nie mają zawsze takiej samej jasności Co więcej Gaia nie będzie obserwowała tych obiektów w pustej przestrzeni tylko we wszechświecie wypełnionym pyłem, który sprawia, że gwiazdy wydają się słabsze i bardziej czerwone niż w rzeczywistości. W związku z tym, jako jasność absolutną przyjęto średnią jasność absolutną supernowych 1a wyznaczoną na podstawie danych z katalogu SNC. W obliczeniach uwzględniono tylko supernowe z wyznaczonym przesunięciem ku czerwieni i obserwowane w filtrze V lub g. Ominięto również jasności różniące się o więcej niż 2mag od wartości średniej. Ze względu na niesymetryczny rozkład jasności, odchylenie standardowe oszacowano niezależnie dla obiektów jaśniejszych i Ciemniejszych. Przyjęto również, że Supernowe 1a nie mogą być jaśniejsze niż -19,3 mag. Dla pozostały typów rozkład przyjęto zgodny z zaproponowanym przez Bialkonow .
+
+\subsubsection{Inne}
+Na koniec informacje których nie wzięto pod uwagę przy szacunkach. Skuteczność rozpoznawania danego obiektu. Nawet jeżeli gaia 		może zauważyć dane zjawisko to nie koniecznie musi na niego zwrócić uwagę.
+
+\subsection{wyniki}
+Stosując powyższy Algorytm dla czterech różnych  różnych typów supernowych uzyskano następujące wyniki
+
+
+
+Widać, zdecydowaną różnicę między moimi oszacowaniami a podawanymi przez pozostałych autorów. Wynika to stąd, że w powyższej pracy uznaliśmy Gaię jako urządzenie doskonałe. To znaczy, uznano że jeżeli coś może zobaczyć to to zostanie zobaczone. Jeżeli uznamy, że spostrzegawczość Gaii wynosi 50 \% to otrzymane wyniki nie różnią się zbytnio od tych zaprezentowanych przez innych autorów.
+
+Dzięki przeglądowi nieba wykonanemu przez Gaię dostaniemy gigantyczne ilości informacji które pozwolą nam lepiej poznać wszechświat. Ddzięki trzem tysiącom supernowych odkrytych przez gaię będziemy mogli lepiej poznać ich naturę. Sprawdzić czy żeczywiście są tak dobrynmi świecami standardowymi jak się wydawało a dzięki temu poprawi się nasza dokładność pomiarów odległości we wszsechświecie. Supernowe pomogą również dokładniej oszacować stałą kluczową dla kosmologii: Stałą Hubble'a. Rozwiązując zjawiska mikrosoczewkowania grawitacyjnego będziemy mogli wyznaczyć masy pojedynczych obiektów i ich związek z jasnością. To pozwoli lepiej zrozumieć ewolucję gwiazdową. Na koniec pięcio letni przegląd nieba da nam dane o milionach gwiazd. Ich fotometrię, spektroskopię i astrometrię. Dzięki tak dużej ilości danych na pewno dokonamy odkryć które podążając za nagłówkami z popularnych portali informacyjnych "zrewolucjionizują nasze wyobrażenie o wszechświecie.
+
+
+
+
+
+%************************************************NOWE KLASYCZNE********************************************
+\section{Nowe Klasyczne}
+Kolejnym typem kataklizmicznych zjawisk przejściowych są Nowe. Powstają one w układach podwójnych złożonych z białego karła i gwiazdy ciągu głównego. Wodór i hel opadający na białego karła tworzy warstwę gazu pod wysokim ciśnieniem i o wysokiej temperaturze. Gdy wewnątrz tej warstwy powstaną warunki sprzyjające zapłonowi wodoru na całej powierzchni następuje gwałtowny wybuch termojądrowy. W jego wyniku część masy jest odrzucona a na białym karle gromadzi się kolejna warstwa wodorowo helowa. 
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 10cm]{NovaDelp.eps}
+\caption{Krzywa zmian blasku nowej w gwiazdozbiorze Delfina zaobserwowanej w 2013 roku}
+\label{Krzywa zmian blasku gwiazdy U GeM.}
+\end{figure}
+Jasność Absolutna zjawiska w maksimum wacha się od – 8,8 do -7,5 magnitudo. I śrenio co 39,6 +- 7,6 dni spada o 2 magnitudo. W związku z powyższym Gaia będzie mogła je zobaczyć nawet w odległości 3mln parseków. W promieniu tym znajduje się cała Droga Mleczna, Galaktyka w Andromedzie (~0,8Mpc) i Galaktyka M33 (0,8, Mpc) .  Łącznie w tych trzech obiektach jest obserwowanych około 37,5 nowych rocznie.  M31 2,5 M33 . Z powodu odległości Nowe w M31 i M33 będą słabsze o około 24,4 mag, co sprawia, że dla Gaia będzie musiała zdążyć je zaobserwować zanim ich jasność spadnie o 3 mag. Przyjmując średni czas pomiędzy obserwacjami tych dwóch galaktyk odpowiednio 30 i 45 dostajemy, że Gaia powinna być w stanie zaobserwować 41\%  nowych z M33 i 58\% nowych w Galaktyce Andromedy.  Z  drugiej strony, Droga Mleczna jest na tyle mała, że wszystkie z nich powinny być zaobserwowane.
+\section{Nowe Karłowate}
+Nowe karłowate, zjawiska przejściowe wybuchowe związane z ciasnym układem podwójnym, którego jeden ze składników jest białym karłem a drugi gwiazdą ciągu głównego. Od czasu do czasu układ zwiększa swoją jasność o dwa do pięciu wielkości gwiazdowych. Jest to spowodowane niestabilnością dysku akrecyjnego który gwałtownie opada na białego karła dostarczając znaczne ilości energi potencjalnej. 
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 10cm]{UGem.eps}
+\caption{Krzywa zmian blasku Nowej Karłowatej.}
+\label{Krzywa zmian blasku Nowej Karlowatej}
+\end{figure}
+\section{Gwiazdy typu R Corona Borealis}
+W poprzednich paragrafach zostały opisane obiekty zwiększające swoją jasność. Tym razem przyjrzyjmy się tym które znikają, gwiazdom typu RCB. Są to olbrzymy bogate w węgiel i z niedoborem wodoru  charakteryzujące się nieregularnymi spadkami jasności. Istnieją dwie hipotezy tłumaczące ich powstawanie. Pierwsza mówi, że te gwiazdy mogą powstawać w wyniku połączenia się dwóch białych karłów. Druga, że powstają w mgławicach planetarnych po błysku helowym w gwiazdach opuszczających asymptotyczną gałąź olbrzymów. Do tej pory znaleziono ich tylko 104 i większość z nich w rejonach centrum galaktyki i w dyskach Magellana, czyli tam gdzie niebo obserwują przeglądy poszukujące mikrosoczewkowania grawitacyjnego. Przegląd całego nieba umożliwi nam poznanie dokładniejszego rozkładu tych obiektów w naszej galaktyce.%\citet{2013ApJ...773..107G}
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 10cm]{RCrB.eps}
+\caption{Krzywa zmian blasku gwiazdy R CrB}
+\label{Krzywa zmian blasku gwiazdy R CrB.}
+\end{figure}
+%http://arxiv.org/pdf/1307.0294.pdf
+%http://arxiv.org/pdf/1206.3448.pdf
+%http://articles.adsabs.harvard.edu//full/1996PASP..108..225C/0000225.000.html
+\section{Mikrosoczewkowanie grawitacyjne}
+Ostatnim typem zjawiska przejściowego omawianego w tej pracy będzie soczewkowanie grawitacyjne. Tym razem to nie obserwowany obiekt się zmienia ale przestrzeń między nim a obserwatorem. Zakrzywienie przestrzeni spowodowane przez masywny obiekt sprawia że światło przechodzące przez ten obszar zmienia swój tor. Przy odpowiednim ustawieniu obserwatora i źródła przestrzeń wokół obiektu załamującego zadziała jak gigantyczna soczewka skupiająca powodująca wielokrotne zwiększenie natężenie światła dochodzącego do nas. Przy centralnym przejściu i dla punktowego źródła to wzmocnienie było by nieskończone. Dodatkowym efektem związanym z mikrosoczewkowaniem jest przesunięcie centrum jasności. Dla przykładowej gwiazdy z ramion spiralnych naszej galaktyki czyli w odległości 5kpc i soczewki w odległości 4 kpc, przesunięcie będzie wynosiło   %\citep{1998astro.ph..5360D} 
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 5cm]{Lensing.eps}
+\caption{Krzywa zmian blasku pierwszego podwójengo układu planetarnego odkrytego dzięki mikrosoczewkowaniu grawitacyjnemu  OGLE-2006-BLG-109Lb,c.}%\citep{2008Sci...319..927G}}
+\label{ OGLE-2006-BLG-109Lb,c}
+\end{figure}
+
+%http://arxiv.org/pdf/0802.1920v2.pdf
+%http://arxiv.org/pdf/astro-ph/9805360v2.pdf
+
+
+
+%\begin{figure}
+%\centering
+%\includegraphics{deklinacja.eps}
+%\caption{Rozklad deklinacji}
+%\label{ Rys.1}
+%\end{figure}
+
+
+%\begin{figure}
+%\centering
+%\includegraphics{Widmo_1a.eps}
+%\caption{Widmo supernowej Ia}
+%\label{ Rys.2}
+%\end{figure}
+
+
+
+%\begin{figure}
+%\centering
+%\includegraphics{Widmo_1BC.eps}
+%\caption{Widmo supernowej typu 1bc}
+%\label{Rys.3}
+%\end{figure}
+
+
+
+%\begin{figure}
+%\centering
+%\includegraphics{Widmo_2.eps}
+%\caption{Widmo supernowej typu II}
+%\label{Rys.4}
+%\end{figure}
+  
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{Lic}
+\end {document}
