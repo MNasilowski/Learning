@@ -1,4 +1,4 @@
-function W = tworz(input,output,coeff, b ,iterations)
+function W = tworz_kroswalidation(input,output,coeff, b ,iterations)
 %funkcja tworz¹ca wagi sieci neuronowej sk³adaj¹cej siê z dwóch warstw i 2
 %neuronów w warstwie ukrytej.
 
@@ -12,7 +12,8 @@ bias = [-1 -1 -1];
 numIn = length (input(:,1));
 suma = 0;
 %i losowe wartoœci wag na pocz¹tek.
-
+if iterations > 0
+while suma < 0.85
     rand('state',sum(100*clock));
     weights = -1 +2.*rand(3,3);
     %sprawdzamy liczbê danych pocz¹tkowych
@@ -57,6 +58,31 @@ suma = 0;
         end
         %Ca³oœæ powtarzamy itteration razy
     end
+    %sprawdzamy skutecznoœæ uczenia
+    suma = 0;
+    for jj = 1:numIn
+        %obliczamy wartoœæ wyjœciow¹ z pierwszego neuronu
+        %H = wagi razy wejœcie
+        %X = wyjœcie z neuronu
+        H1 = bias(1,1)*weights(1,1) + input(jj,1)*weights(1,2) + input(jj,2)*weights(1,3);
+        x21 = sigma(H1,b);
+        %drugiego neuronu
+        H2 = bias(1,2)*weights(2,1) + input(jj,1)*weights(2,2) + input(jj,2)*weights(2,3);
+        x22 = sigma(H2,b);
+        %oraz z trzeciego neuronu czyli ostateczne wyjœcie z sieci.
+        H3 = bias(1,3)*weights(3,1) + x21*weights(3,2) + x22*weights(3,3);
+        out = sigma(H3,b);
+        out = klasyfikuj(out);
+        if out == output(jj)
+            suma = suma + 1;
+        end
+    end
+    suma=suma*1.0/numIn;
 
+end        
+else
+    rand('state',sum(100*clock));
+    weights = -1 +2.*rand(3,3);
+end
     
 W = weights;
